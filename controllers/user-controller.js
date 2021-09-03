@@ -2,13 +2,13 @@ const { Thought, User } = require('../models');
 
 const userController = {
     getUsers(req, res) {
-        User.findAll()
+        User.findAll({})
         .then((data)=> {
             res.json(data)
         })
     },
-    singleUser(req, res) {
-        User.findAll()
+    singleUser({ params }, res) {
+        User.findOne({ _id: params.id })
         .then((data)=> {
             res.json(data)
         })
@@ -19,6 +19,6 @@ const userController = {
             res.json(data)
         })
     }
-}
+};
 
-module.exports = userController
+module.exports = userController;
