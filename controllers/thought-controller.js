@@ -19,6 +19,10 @@ const thoughtController = {
             res.json(data)
         })
     },
+    updateThought() {},
+    deleteThought() {},
+    addReaction() {},
+    deleteReaction() {}
     
 };
 

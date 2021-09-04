@@ -18,7 +18,11 @@ const userController = {
         .then((data)=> {
             res.json(data)
         })
-    }
+    },
+    updateUser() {},
+    deleteUser() {},
+    addFriend() {},
+    deleteFriend() {},
 };
 
 module.exports = userController;
