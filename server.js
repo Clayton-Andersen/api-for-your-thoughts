@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/api-for-your-th
   useUnifiedTopology: true
 });
 
-mongoose.set('debug', true);
+// mongoose.set('debug', true);
 
 app.use(require('./routes'));
 

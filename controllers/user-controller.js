@@ -10,15 +10,21 @@ const userController = {
       });
     },
     singleUser({ params }, res) {
-        User.findOne({ _id: params.id })
-        populate({ 
+        User.findById({ _id: params.id })
+        .populate({ 
             path: 'thoughts', 
-            select: '-__v' 
+            select: '-__v -username -userId -id' 
         })
         .select('-__v')
-        .then(data => res.json(data))
-        .catch(err => {
-        console.log(err);
+        .then(data => {
+            if(!data) {
+                res.status(400).json({ message: 'No user found with this id!'})
+                return;
+            }
+            res.json(data);
+        })
+        .catch(err => { 
+        // console.log(err);
         res.sendStatus(400);
       });
     },
