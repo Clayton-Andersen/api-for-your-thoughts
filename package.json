@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/Clayton-Andersen/api-for-your-thoughts#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "mongoose": "^6.0.4"
-  }
+  },
+  "devDependencies": {}
 }
