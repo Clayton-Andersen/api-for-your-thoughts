@@ -1,4 +1,4 @@
-const { Thought, User } = require('../models');
+const { Thought, } = require('../models');
 
 const thoughtController = {
     getThought(req, res) {
@@ -19,9 +19,23 @@ const thoughtController = {
             res.json(data)
         })
     },
-    updateThought() {},
-    deleteThought() {},
-    addReaction() {},
+    updateThought({ params, body }, res) {
+        Thought.findByIdAndUpdate({ _id: params.id }, 
+            body, 
+            { new: true, runValidators: true })
+        .then((data)=> {
+            res.json(data)
+        })
+    },
+    deleteThought({ params}, res ) {
+        Thought.findOneAndDelete({ _id: params.id })
+        .then((data) => {
+            res.json(data)
+        })
+    },
+    addReaction({ params }, res) {
+        Thought.findByIdAndUpdate({ _id: params.id })
+    },
     deleteReaction() {}
     
 };
