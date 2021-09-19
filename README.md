@@ -16,7 +16,9 @@ API that uses the efficiency of MongoDB and flexability of Mongoose to power sim
 Navigate to the github repository and clone repo. If newer versions of packages are available you can install necessary packages by accessing the terminal from the root directory and first typing "npm init" to create the package.json, type "npm i mongoose" and then press enter allowing time for the pachages to install. Once installed, you're up and running and now you can simply type "npm start" to get the application running. The app should be available at this point at the url: localhost:3001. Because there isn't a front end, the application routes can be accessed using Insomnia Core.
 
 ## Usage
-The application is also deployed on heroku and front end functionality available to anyone. Attached are screenshots of the application in use.
+The application is also deployed on heroku and front end functionality available to anyone. Attached are screenshots of the application in use as well as walkthrough video.
+
+https://drive.google.com/file/d/1tDyjiWBLvDDS9nKdFJO2E6q4GY56Jldr/view
 
 ![image](https://user-images.githubusercontent.com/82545902/132143583-06a1b5de-ee3f-4b4a-9833-6d0c40b3c95d.png)
 ![image](https://user-images.githubusercontent.com/82545902/132143839-6264fc9f-a7f0-4015-b788-4a0a356fad93.png)
