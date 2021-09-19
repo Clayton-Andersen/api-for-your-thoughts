@@ -17,6 +17,7 @@ router
 
 router
 .route('/:id')
+.post(newThought)
 .get(singleThought)
 .put(updateThought)
 .delete(deleteThought)
